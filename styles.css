@@ -1,0 +1,462 @@
+body {
+    background: #111;
+    color: #fff;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background: #000;
+    padding: 2rem 0 1rem 0;
+    text-align: center;
+    border-bottom: 1px solid #333;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0.3rem 0.7rem;
+    border-radius: 3px;
+    transition: background 0.2s, color 0.2s;
+}
+
+nav a:hover {
+    background: #fff;
+    color: #111;
+}
+
+.hero {
+    background: linear-gradient(90deg, #222 60%, #111 100%);
+    padding: 3rem 1rem 2rem 1rem;
+    text-align: center;
+    border-bottom: 1px solid #222;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.hero p {
+    color: #ccc;
+    font-size: 1.2rem;
+}
+
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.feature {
+    background: #181818;
+    border-left: 5px solid #fff;
+    padding: 2rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+}
+
+.feature h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.feature p {
+    color: #bbb;
+    font-size: 1.1rem;
+}
+
+footer {
+    background: #000;
+    color: #888;
+    text-align: center;
+    padding: 1.5rem 0 1rem 0;
+    font-size: 1rem;
+    border-top: 1px solid #222;
+    margin-top: 3rem;
+}
+
+.feature-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1.2rem;
+    background: #fff;
+    color: #111;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    cursor: pointer;
+}
+
+.feature-link:hover {
+    background: #222;
+    color: #fff;
+}
+
+.contact-support {
+    background: #191919;
+    color: #eee;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    padding: 2rem 1rem 1.5rem 1rem;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 0;
+}
+
+.contact-support h3 {
+    margin-top: 0;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+.contact-support p {
+    margin: 0.5rem 0;
+    color: #ccc;
+    font-size: 1.05rem;
+}
+
+.coffee-img {
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    margin: 1.5rem auto 1rem auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+    opacity: 0.95;
+    transition: transform 0.7s cubic-bezier(0.4,0,0.2,1), box-shadow 0.7s, opacity 0.7s;
+}
+.coffee-img:hover {
+    transform: scale(1.04) rotate(-1deg);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+    opacity: 1;
+}
+
+.equipment-section, .grind-section, .brew-section {
+    background: #181818;
+    border-left: 4px solid #fff;
+    padding: 2rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.13);
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s cubic-bezier(0.4,0,0.2,1), transform 1s cubic-bezier(0.4,0,0.2,1);
+}
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 0 0.5rem;
+    }
+    .feature {
+        padding: 1.2rem 0.7rem;
+    }
+    header h1 {
+        font-size: 1.5rem;
+    }
+    .hero h2 {
+        font-size: 1.2rem;
+    }
+    .coffee-img {
+        max-width: 98vw;
+    }
+    .equipment-section, .grind-section, .brew-section {
+        padding: 1.2rem 0.7rem;
+    }
+}
+
+/* Hamburger: only three white lines, no background, border, or shadow */
+.hamburger {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+    position: fixed;
+    left: 18px;
+    top: 18px;
+    z-index: 2000;
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+    transition: none;
+}
+.hamburger:hover {
+    background: none !important;
+    box-shadow: none !important;
+}
+.hamburger span {
+    display: block;
+    height: 4px;
+    width: 26px;
+    background: #fff;
+    margin: 5px 0;
+    border-radius: 2px;
+    transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+header nav {
+    display: none;
+}
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -260px;
+    width: 240px;
+    height: 100vh;
+    background: #181818;
+    color: #fff;
+    box-shadow: 2px 0 24px rgba(255, 204, 51, 0.10), 0 0 0 2px #ffcc33 inset;
+    z-index: 1200;
+    padding-top: 4.5rem;
+    transition: left 0.35s cubic-bezier(0.4,0,0.2,1);
+    overflow-y: auto;
+    border-right: 2px solid #ffcc33;
+    display: block;
+}
+.sidebar.open {
+    left: 0;
+    animation: sidebarSlideIn 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.sidebar ul li {
+    border-bottom: 1px solid #222;
+}
+.sidebar ul li a, .sidebar ul li a:link, .sidebar ul li a:visited {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+    transition: background 0.2s, color 0.2s;
+    position: relative;
+    overflow: hidden;
+}
+.sidebar ul li a:hover {
+    background: #fff;
+    color: #111;
+}
+.sidebar ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0; bottom: 0;
+    width: 100%; height: 2px;
+    background: linear-gradient(90deg, #ffb347 0%, #ffcc33 100%);
+    transform: scaleX(0);
+    transition: transform 0.3s;
+}
+.sidebar ul li a:hover::after {
+    transform: scaleX(1);
+}
+
+.sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.45);
+    z-index: 1099;
+    transition: opacity 0.3s;
+}
+.sidebar-overlay.active {
+    display: block;
+}
+
+@media (min-width: 901px) {
+    .sidebar {
+        display: block;
+    }
+    .sidebar-overlay {
+        display: none !important;
+    }
+}
+
+/* --- Fun Fact Feature Additions --- */
+.animated-btn {
+    background: linear-gradient(90deg, #ffb347 0%, #ffcc33 100%);
+    color: #222;
+    border: none;
+    border-radius: 25px;
+    padding: 0.7rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 0.5rem 0.5rem 0.5rem 0;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(255, 204, 51, 0.15);
+    transition: background 0.3s, transform 0.2s;
+}
+.animated-btn:hover {
+    background: linear-gradient(90deg, #ffcc33 0%, #ffb347 100%);
+    transform: scale(1.07);
+}
+
+.like-btn, .share-btn {
+    background: #222;
+    color: #ff4d4d;
+    border: none;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    font-size: 1.3rem;
+    margin: 0 0.3rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, transform 0.2s;
+    position: relative;
+}
+.like-btn span {
+    color: #fff;
+    font-size: 1rem;
+    margin-left: 0.3rem;
+}
+.like-btn.liked {
+    background: #ff4d4d;
+    color: #fff;
+    animation: pop 0.4s;
+}
+@keyframes pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+}
+.share-btn {
+    color: #4dcaff;
+}
+.fact-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 220px;
+    margin-bottom: 1rem;
+}
+#coffeeFact {
+    font-size: 1.25rem;
+    color: #ffe082;
+    text-align: center;
+    margin: 1rem 0 0.5rem 0;
+    min-height: 48px;
+    transition: color 0.3s;
+}
+.fact-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+/* Fact fade/slide animation */
+@keyframes factFadeIn {
+    0% { opacity: 0; transform: translateY(30px) scale(0.95); }
+    100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+.fact-animate {
+    animation: factFadeIn 0.7s cubic-bezier(0.4,0,0.2,1);
+}
+/* Sidebar open animation (extra polish) */
+.sidebar.open {
+    animation: sidebarSlideIn 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+@keyframes sidebarSlideIn {
+    0% { left: -260px; }
+    100% { left: 0; }
+}
+
+/* Top-right floating Fun Fact button */
+.fact-top-btn {
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    background: linear-gradient(90deg, #ffb347 0%, #ffcc33 100%);
+    color: #222;
+    border: none;
+    border-radius: 25px;
+    padding: 0.6rem 1.3rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(255, 204, 51, 0.15);
+    cursor: pointer;
+    z-index: 1200;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.2s;
+    display: inline-block;
+    animation: floatIn 1s cubic-bezier(0.4,0,0.2,1);
+}
+.fact-top-btn:hover {
+    background: linear-gradient(90deg, #ffcc33 0%, #ffb347 100%);
+    transform: scale(1.07) rotate(-2deg);
+}
+@keyframes floatIn {
+    0% { opacity: 0; transform: translateY(-30px) scale(0.9); }
+    100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Sidebar Random Fact link animation */
+.sidebar-fact-link .fact-anim {
+    display: inline-block;
+    animation: factWiggle 2.5s infinite;
+    color: #ffe082;
+    font-weight: bold;
+}
+@keyframes factWiggle {
+    0%, 100% { transform: rotate(0deg) scale(1); }
+    10% { transform: rotate(-7deg) scale(1.08); }
+    20% { transform: rotate(7deg) scale(1.12); }
+    30% { transform: rotate(-7deg) scale(1.08); }
+    40% { transform: rotate(7deg) scale(1.12); }
+    50% { transform: rotate(0deg) scale(1); }
+}
+
+hamburger.addEventListener('click', () => {
+    const isOpen = sidebar.classList.contains('open');
+    sidebar.classList.toggle('open');
+    sidebarOverlay.classList.toggle('active');
+    hamburger.classList.toggle('open');
+}); 
